@@ -74,9 +74,15 @@ const robots = [
 
 var robotcontainer = document.getElementsByClassName("robot-container")[0]
 console.log(robotcontainer)
-function display_robots(){
+function display_robots(filter=""){
     robotcontainer.innerHTML = "" // Clearing the robot container everytime we are genarating new divs
-    for(let robot of robots) {
+    let new_robot_list = robots;
+    if(filter!=="") {
+        new_robot_list = robots.filter(robot => robot.name.toLowerCase().includes(filter.toLowerCase()));
+        console.log(new_robot_list)
+    }
+
+    for(let robot of new_robot_list) {
         let newdiv = document.createElement('div')
         newdiv.className = "robot"
 
