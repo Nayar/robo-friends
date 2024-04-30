@@ -111,5 +111,6 @@ display_robots()
 
 let inputrobotname = document.getElementById("inputrobotname")
 inputrobotname.oninput = function() {
-    display_robots()
+    let searchvalue = inputrobotname.value
+    display_robots(searchvalue)
 }
