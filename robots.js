@@ -74,28 +74,32 @@ const robots = [
 
 var robotcontainer = document.getElementsByClassName("robot-container")[0]
 console.log(robotcontainer)
+function display_robots(){
+    for(let robot of robots) {
+        let newdiv = document.createElement('div')
+        newdiv.className = "robot"
 
-for(let robot of robots) {
-    let newdiv = document.createElement('div')
-    newdiv.className = "robot"
+        let profilediv = document.createElement('div')
+        profilediv.className = 'imageholder'
 
-    let profilediv = document.createElement('div')
-    profilediv.className = 'imageholder'
+        let profileimg = document.createElement('img')
+        profileimg.src = robot.image
+        profileimg.width= "200"
+        profileimg.height="200"
 
-    let profileimg = document.createElement('img')
-    profileimg.src = robot.image
-    profileimg.width= "200"
-    profileimg.height="200"
+        profilediv.appendChild(profileimg)
 
-    profilediv.appendChild(profileimg)
-
-    let newname = document.createElement('h2')
-    newname.innerHTML= robot.name
-    let newemail = document.createElement('h3')
-    newemail.innerHTML = robot.email
-    newdiv.appendChild(profilediv)
-    newdiv.appendChild(newname)
-    newdiv.appendChild(newemail)
-    robotcontainer.appendChild(newdiv)
+        let newname = document.createElement('h2')
+        newname.innerHTML= robot.name
+        let newemail = document.createElement('h3')
+        newemail.innerHTML = robot.email
+        newdiv.appendChild(profilediv)
+        newdiv.appendChild(newname)
+        newdiv.appendChild(newemail)
+        robotcontainer.appendChild(newdiv)
+    }
 }
-
+let inputrobotname = document.getElementById("inputrobotname")
+inputrobotname.oninput = function() {
+    alert("you have typed")
+}

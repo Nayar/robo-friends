@@ -27,6 +27,8 @@ h1 {
     background-image: url("./card-pattern.png");
     width: 200px;
     border-radius: 20px;
+    padding: 20px;
+    margin: 5px;
 }
 
 .robot-container {
