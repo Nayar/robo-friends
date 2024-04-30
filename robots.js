@@ -75,6 +75,7 @@ const robots = [
 var robotcontainer = document.getElementsByClassName("robot-container")[0]
 console.log(robotcontainer)
 function display_robots(){
+    robotcontainer.innerHTML = "" // Clearing the robot container everytime we are genarating new divs
     for(let robot of robots) {
         let newdiv = document.createElement('div')
         newdiv.className = "robot"
@@ -101,5 +102,5 @@ function display_robots(){
 }
 let inputrobotname = document.getElementById("inputrobotname")
 inputrobotname.oninput = function() {
-    alert("you have typed")
+    display_robots()
 }
