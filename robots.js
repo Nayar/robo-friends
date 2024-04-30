@@ -100,6 +100,9 @@ function display_robots(){
         robotcontainer.appendChild(newdiv)
     }
 }
+
+display_robots()
+
 let inputrobotname = document.getElementById("inputrobotname")
 inputrobotname.oninput = function() {
     display_robots()
