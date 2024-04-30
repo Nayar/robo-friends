@@ -1,3 +1,7 @@
+html, body {
+    height:100%;
+}
+
 nav {
     background-color: rgb(25, 245, 25);
     display: flex;
@@ -9,4 +13,10 @@ nav {
 h1 {
     font-family: 'SEGA LOGO FONT', sans-serif;
                                                 
+}
+
+.main {
+    background-image: url("./circuit-pattern.png");
+    background-color: purple;
+    height: 100%;
 }
