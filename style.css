@@ -25,6 +25,7 @@ h1 {
     background-color: aqua;
     border: 1px solid black;
     background-image: url("./card-pattern.png");
+    width: 200px;
 }
 
 .robot-container {
@@ -32,4 +33,9 @@ h1 {
     grid-template-columns: auto auto auto;
     margin: 0 auto;;
     width: 70%;
+}
+
+.imageholder {
+    background-color: darkblue;
+    border-radius: 50%;
 }
