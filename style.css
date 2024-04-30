@@ -1,6 +1,7 @@
 nav {
-    background-color: green;
+    background-color: rgb(25, 245, 25);
     display: flex;
     justify-content: space-around;
     padding: 25px;
+    background-image: url("./circuit-pattern.png");
 }
